@@ -12,7 +12,23 @@
 		4F58F2EF2216EDB8007B8B71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F58F2ED2216EDB8007B8B71 /* Main.storyboard */; };
 		4F58F2F12216EDB8007B8B71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F58F2F02216EDB8007B8B71 /* Assets.xcassets */; };
 		4F58F2F42216EDB8007B8B71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F58F2F22216EDB8007B8B71 /* LaunchScreen.storyboard */; };
+		4F58F2FD2216EEF7007B8B71 /* dbInfo.db in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4F58F2FB2216EED9007B8B71 /* dbInfo.db */; };
+		4F58F3002216F0AB007B8B71 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F58F2FF2216F0AB007B8B71 /* libsqlite3.0.tbd */; };
+		4F58F3062216F134007B8B71 /* dbHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F58F3052216F134007B8B71 /* dbHelper.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4F58F2FC2216EEF0007B8B71 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				4F58F2FD2216EEF7007B8B71 /* dbInfo.db in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4F58F2E62216EDB8007B8B71 /* SQLITEExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SQLITEExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +38,10 @@
 		4F58F2F02216EDB8007B8B71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F58F2F32216EDB8007B8B71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F58F2F52216EDB8007B8B71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F58F2FB2216EED9007B8B71 /* dbInfo.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = dbInfo.db; sourceTree = "<group>"; };
+		4F58F2FF2216F0AB007B8B71 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		4F58F3012216F0D8007B8B71 /* SQLITEExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SQLITEExample-Bridging-Header.h"; sourceTree = "<group>"; };
+		4F58F3052216F134007B8B71 /* dbHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dbHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F58F3002216F0AB007B8B71 /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +61,7 @@
 			children = (
 				4F58F2E82216EDB8007B8B71 /* SQLITEExample */,
 				4F58F2E72216EDB8007B8B71 /* Products */,
+				4F58F2FE2216F0AA007B8B71 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +76,33 @@
 		4F58F2E82216EDB8007B8B71 /* SQLITEExample */ = {
 			isa = PBXGroup;
 			children = (
+				4F58F3042216F125007B8B71 /* Models */,
+				4F58F2FB2216EED9007B8B71 /* dbInfo.db */,
 				4F58F2E92216EDB8007B8B71 /* AppDelegate.swift */,
 				4F58F2EB2216EDB8007B8B71 /* ViewController.swift */,
 				4F58F2ED2216EDB8007B8B71 /* Main.storyboard */,
 				4F58F2F02216EDB8007B8B71 /* Assets.xcassets */,
 				4F58F2F22216EDB8007B8B71 /* LaunchScreen.storyboard */,
 				4F58F2F52216EDB8007B8B71 /* Info.plist */,
+				4F58F3012216F0D8007B8B71 /* SQLITEExample-Bridging-Header.h */,
 			);
 			path = SQLITEExample;
+			sourceTree = "<group>";
+		};
+		4F58F2FE2216F0AA007B8B71 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4F58F2FF2216F0AB007B8B71 /* libsqlite3.0.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4F58F3042216F125007B8B71 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4F58F3052216F134007B8B71 /* dbHelper.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +115,7 @@
 				4F58F2E22216EDB8007B8B71 /* Sources */,
 				4F58F2E32216EDB8007B8B71 /* Frameworks */,
 				4F58F2E42216EDB8007B8B71 /* Resources */,
+				4F58F2FC2216EEF0007B8B71 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -96,6 +138,7 @@
 				TargetAttributes = {
 					4F58F2E52216EDB8007B8B71 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -136,6 +179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F58F3062216F134007B8B71 /* dbHelper.swift in Sources */,
 				4F58F2EC2216EDB8007B8B71 /* ViewController.swift in Sources */,
 				4F58F2EA2216EDB8007B8B71 /* AppDelegate.swift in Sources */,
 			);
@@ -274,11 +318,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SQLITEExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bhadresh.SQLITEExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SQLITEExample/SQLITEExample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -288,11 +335,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SQLITEExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bhadresh.SQLITEExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SQLITEExample/SQLITEExample-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

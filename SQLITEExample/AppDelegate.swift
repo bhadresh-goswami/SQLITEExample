@@ -13,9 +13,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    var dbPath = ""
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+       
+        let arrDir = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        
+        let path = arrDir[0]+"/dbInfo.db"
+        print(path)
+        if FileManager.default.fileExists(atPath: path){
+            self.dbPath = path
+        }
+        else{
+            //copy from source to simulator
+            do{
+                let atPath = Bundle.main.path(forResource: "dbInfo", ofType: "db")
+                try FileManager.default.copyItem(atPath: atPath!, toPath: path)
+                self.dbPath = path
+            }
+            catch let ex as NSError{
+                print(ex.localizedDescription)
+            }
+        }
+        
+        
         return true
     }
 
